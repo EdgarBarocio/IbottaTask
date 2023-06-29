@@ -8,12 +8,12 @@
 import Foundation
 
 struct OffersModel: Codable {
-    var id: String
-    var url: String
-    var name: String
-    var description: String
-    var terms: String
-    var currentValue: String
+    var id: String?
+    var url: String?
+    var name: String?
+    var description: String?
+    var terms: String?
+    var currentValue: String?
     
     enum CodingKeys: String, CodingKey {
         case id

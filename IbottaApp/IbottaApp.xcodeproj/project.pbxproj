@@ -18,6 +18,7 @@
 		8E7F5B462A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B452A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift */; };
 		8E7F5B532A4CF8AB00F627A7 /* Offers.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E7F5B522A4CF8AA00F627A7 /* Offers.json */; };
 		8E7F5B562A4CF93100F627A7 /* OffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B552A4CF93100F627A7 /* OffersModel.swift */; };
+		8E7F5B582A4CFEB700F627A7 /* DataParsingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B572A4CFEB700F627A7 /* DataParsingWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8E7F5B452A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbottaAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8E7F5B522A4CF8AA00F627A7 /* Offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Offers.json; path = ../data/Offers.json; sourceTree = "<group>"; };
 		8E7F5B552A4CF93100F627A7 /* OffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersModel.swift; sourceTree = "<group>"; };
+		8E7F5B572A4CFEB700F627A7 /* DataParsingWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParsingWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				8E7F5B2B2A4CF89500F627A7 /* Assets.xcassets */,
 				8E7F5B2D2A4CF89500F627A7 /* LaunchScreen.storyboard */,
 				8E7F5B302A4CF89500F627A7 /* Info.plist */,
+				8E7F5B572A4CFEB700F627A7 /* DataParsingWorker.swift */,
 			);
 			path = IbottaApp;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				8E7F5B272A4CF89400F627A7 /* ViewController.swift in Sources */,
 				8E7F5B232A4CF89400F627A7 /* AppDelegate.swift in Sources */,
+				8E7F5B582A4CFEB700F627A7 /* DataParsingWorker.swift in Sources */,
 				8E7F5B562A4CF93100F627A7 /* OffersModel.swift in Sources */,
 				8E7F5B252A4CF89400F627A7 /* SceneDelegate.swift in Sources */,
 			);
