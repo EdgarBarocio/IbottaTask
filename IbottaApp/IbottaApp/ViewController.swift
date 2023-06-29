@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.title = "Latest offers!"
     }
 
 
@@ -63,6 +65,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
                return myCell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let details = OfferDetailsView()
+        
+        self.navigationController?.pushViewController(details, animated: true)
+    }
 }
 

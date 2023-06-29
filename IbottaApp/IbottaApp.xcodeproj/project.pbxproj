@@ -19,6 +19,8 @@
 		8E7F5B532A4CF8AB00F627A7 /* Offers.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E7F5B522A4CF8AA00F627A7 /* Offers.json */; };
 		8E7F5B562A4CF93100F627A7 /* OffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B552A4CF93100F627A7 /* OffersModel.swift */; };
 		8E7F5B582A4CFEB700F627A7 /* DataParsingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B572A4CFEB700F627A7 /* DataParsingWorker.swift */; };
+		8E7F5B5B2A4D14CB00F627A7 /* OfferDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B5A2A4D14CB00F627A7 /* OfferDetailsView.swift */; };
+		8E7F5B5E2A4D18F200F627A7 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B5D2A4D18F200F627A7 /* OfferCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		8E7F5B522A4CF8AA00F627A7 /* Offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Offers.json; path = ../data/Offers.json; sourceTree = "<group>"; };
 		8E7F5B552A4CF93100F627A7 /* OffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersModel.swift; sourceTree = "<group>"; };
 		8E7F5B572A4CFEB700F627A7 /* DataParsingWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParsingWorker.swift; sourceTree = "<group>"; };
+		8E7F5B5A2A4D14CB00F627A7 /* OfferDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsView.swift; sourceTree = "<group>"; };
+		8E7F5B5D2A4D18F200F627A7 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 		8E7F5B212A4CF89400F627A7 /* IbottaApp */ = {
 			isa = PBXGroup;
 			children = (
+				8E7F5B5C2A4D18D300F627A7 /* Cells */,
+				8E7F5B592A4D14B800F627A7 /* Details */,
 				8E7F5B542A4CF91D00F627A7 /* Models */,
 				8E7F5B222A4CF89400F627A7 /* AppDelegate.swift */,
 				8E7F5B242A4CF89400F627A7 /* SceneDelegate.swift */,
@@ -142,6 +148,22 @@
 				8E7F5B552A4CF93100F627A7 /* OffersModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8E7F5B592A4D14B800F627A7 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F5B5A2A4D14CB00F627A7 /* OfferDetailsView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		8E7F5B5C2A4D18D300F627A7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F5B5D2A4D18F200F627A7 /* OfferCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +300,9 @@
 			files = (
 				8E7F5B272A4CF89400F627A7 /* ViewController.swift in Sources */,
 				8E7F5B232A4CF89400F627A7 /* AppDelegate.swift in Sources */,
+				8E7F5B5B2A4D14CB00F627A7 /* OfferDetailsView.swift in Sources */,
 				8E7F5B582A4CFEB700F627A7 /* DataParsingWorker.swift in Sources */,
+				8E7F5B5E2A4D18F200F627A7 /* OfferCollectionViewCell.swift in Sources */,
 				8E7F5B562A4CF93100F627A7 /* OffersModel.swift in Sources */,
 				8E7F5B252A4CF89400F627A7 /* SceneDelegate.swift in Sources */,
 			);
