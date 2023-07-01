@@ -36,33 +36,30 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
    
     private func buildCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 60, height: 60)
-        
-        /**
-            var layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-            layout.itemSize = CGSizeMake(<width>, <height>)
-            // Setting the space between cells
-            layout.minimumInteritemSpacing = <Space between columns>
-            layout.minimumLineSpacing = <Space between rows>
-         **/
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+        let width = UIScreen.main.bounds.size.width
+        //calculation of cell size
+        layout.itemSize = CGSize(width: ((width / 2) - 32)   , height: 150)
+        layout.minimumInteritemSpacing = 0.0
+        layout.minimumLineSpacing = 24.0
         
         self.offersCollectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
         self.offersCollectionView.dataSource = self
         self.offersCollectionView.delegate = self
-        self.offersCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "OfferCell")
+        self.offersCollectionView.register(OfferCollectionViewCell.self, forCellWithReuseIdentifier: "OfferCell")
         self.offersCollectionView.backgroundColor = UIColor.white
+        self.offersCollectionView.collectionViewLayout = layout
         view.addSubview(self.offersCollectionView)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfferCell", for: indexPath)
-               myCell.backgroundColor = UIColor.blue
-               return myCell
+        myCell.backgroundColor = UIColor.blue
+        return myCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

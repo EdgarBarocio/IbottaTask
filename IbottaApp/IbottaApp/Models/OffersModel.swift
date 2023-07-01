@@ -15,6 +15,8 @@ struct OffersModel: Codable {
     var terms: String?
     var currentValue: String?
     
+    var isFavorite: Bool? = false
+    
     enum CodingKeys: String, CodingKey {
         case id
         case url
