@@ -61,9 +61,6 @@ class OfferCollectionViewCell: UICollectionViewCell {
     }
     
     private func addViews() {
-        addSubview(offerImage)
-        addSubview(valueLabel)
-        addSubview(offerNameLabel)
         addSubview(stackView)
         
         stackView.addArrangedSubview(offerImage)

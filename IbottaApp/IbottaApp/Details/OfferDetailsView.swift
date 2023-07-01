@@ -10,12 +10,19 @@ import UIKit
 
 class OfferDetailsView: UIViewController {
     
+    let ghostView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .orange
+        view.frame = CGRectMake(0, 0, UIScreen.main.bounds.size.width, 50)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     let offerImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.lightGray
-        let width = UIScreen.main.bounds.size.width
-        imageView.frame = CGRectMake(0, 0, ((width / 2) - 32), 200)
-        imageView.image = UIImage(systemName: "Globe")
+        imageView.backgroundColor = .orange
+        imageView.frame = CGRectMake(0, 0, UIScreen.main.bounds.size.width, 200)
+        //imageView.image = UIImage(named: "empty")
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 5.0
         imageView.clipsToBounds = true
@@ -29,6 +36,7 @@ class OfferDetailsView: UIViewController {
         //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
         label.text = "Offer Value"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .lightGray
         return label
     }()
     
@@ -38,6 +46,7 @@ class OfferDetailsView: UIViewController {
         //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
         label.text = "Offer Name"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .blue
         return label
     }()
     
@@ -47,19 +56,23 @@ class OfferDetailsView: UIViewController {
         //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
         label.text = "Offer Details"
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .red
         return label
     }()
     
     let favoriteToggle: UISwitch = {
         let uiSwitch = UISwitch()
+        uiSwitch.backgroundColor = .brown
         return uiSwitch
     }()
     
     let stackView: UIStackView = {
         let sv = UIStackView()
-        sv.axis  = NSLayoutConstraint.Axis.vertical
-        sv.alignment = UIStackView.Alignment.center
-        sv.distribution = UIStackView.Distribution.fillEqually
+        sv.frame = CGRect(x: 0, y: 50, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+        sv.axis  = .vertical
+        sv.alignment = .top
+        sv.distribution = .fillEqually
+        sv.spacing = 2
         sv.translatesAutoresizingMaskIntoConstraints = false;
         return sv
     }()
@@ -72,17 +85,20 @@ class OfferDetailsView: UIViewController {
     }
     
     private func buildView() {
-        self.view.addSubview(offerImage)
-        self.view.addSubview(favoriteToggle)
-        self.view.addSubview(offerNameLabel)
-        self.view.addSubview(offerDetailsLabel)
-        self.view.addSubview(valueLabel)
         self.view.addSubview(stackView)
-        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        ])
+            
+        stackView.addArrangedSubview(ghostView)
         stackView.addArrangedSubview(offerImage)
         stackView.addArrangedSubview(favoriteToggle)
         stackView.addArrangedSubview(offerNameLabel)
         stackView.addArrangedSubview(valueLabel)
         stackView.addArrangedSubview(offerDetailsLabel)
+        
     }
 }
