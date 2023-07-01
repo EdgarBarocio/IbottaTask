@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E59CD342A50B7CC005F6962 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E59CD332A50B7CC005F6962 /* empty.png */; };
 		8E59CD392A50D0A0005F6962 /* OffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD382A50D0A0005F6962 /* OffersViewModel.swift */; };
 		8E59CD3B2A50D0B1005F6962 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD3A2A50D0B1005F6962 /* DetailsViewModel.swift */; };
 		8E59CD3F2A50D445005F6962 /* ServiceCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD3D2A50D445005F6962 /* ServiceCalls.swift */; };
@@ -46,7 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8E59CD332A50B7CC005F6962 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
 		8E59CD382A50D0A0005F6962 /* OffersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewModel.swift; sourceTree = "<group>"; };
 		8E59CD3A2A50D0B1005F6962 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		8E59CD3D2A50D445005F6962 /* ServiceCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCalls.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 		8E7F5B162A4CF89400F627A7 = {
 			isa = PBXGroup;
 			children = (
-				8E59CD332A50B7CC005F6962 /* empty.png */,
 				8E7F5B522A4CF8AA00F627A7 /* Offers.json */,
 				8E7F5B212A4CF89400F627A7 /* IbottaApp */,
 				8E7F5B382A4CF89500F627A7 /* IbottaAppTests */,
@@ -303,7 +300,6 @@
 			files = (
 				8E7F5B532A4CF8AB00F627A7 /* Offers.json in Resources */,
 				8E7F5B2F2A4CF89500F627A7 /* LaunchScreen.storyboard in Resources */,
-				8E59CD342A50B7CC005F6962 /* empty.png in Resources */,
 				8E7F5B2C2A4CF89500F627A7 /* Assets.xcassets in Resources */,
 				8E7F5B2A2A4CF89400F627A7 /* Main.storyboard in Resources */,
 			);

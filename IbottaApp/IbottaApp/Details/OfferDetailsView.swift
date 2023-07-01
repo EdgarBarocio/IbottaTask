@@ -22,7 +22,6 @@ class OfferDetailsView: UIViewController {
         let imageView = UIImageView()
         imageView.backgroundColor = .orange
         imageView.frame = CGRectMake(0, 0, UIScreen.main.bounds.size.width, 200)
-        //imageView.image = UIImage(named: "empty")
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 5.0
         imageView.clipsToBounds = true
