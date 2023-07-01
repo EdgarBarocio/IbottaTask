@@ -11,22 +11,13 @@ class ViewController: UIViewController {
 
     var offersCollectionView: UICollectionView!
     
-    //Custom load view to create everything programatically instead of using Storyboards
-    override func loadView() {
-        view = UIView()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        buildCollectionView()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.title = "Latest offers!"
+        
+        buildCollectionView()
     }
 
 

@@ -12,6 +12,7 @@
 		8E59CD3F2A50D445005F6962 /* ServiceCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD3D2A50D445005F6962 /* ServiceCalls.swift */; };
 		8E59CD402A50D445005F6962 /* DataParsingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD3E2A50D445005F6962 /* DataParsingWorker.swift */; };
 		8E59CD422A50D473005F6962 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD412A50D473005F6962 /* ImageCache.swift */; };
+		8E59CD442A50DCF4005F6962 /* OffersCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD432A50DCF4005F6962 /* OffersCollectionViewCellViewModel.swift */; };
 		8E7F5B232A4CF89400F627A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B222A4CF89400F627A7 /* AppDelegate.swift */; };
 		8E7F5B252A4CF89400F627A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B242A4CF89400F627A7 /* SceneDelegate.swift */; };
 		8E7F5B272A4CF89400F627A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B262A4CF89400F627A7 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		8E59CD3D2A50D445005F6962 /* ServiceCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCalls.swift; sourceTree = "<group>"; };
 		8E59CD3E2A50D445005F6962 /* DataParsingWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParsingWorker.swift; sourceTree = "<group>"; };
 		8E59CD412A50D473005F6962 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		8E59CD432A50DCF4005F6962 /* OffersCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		8E7F5B1F2A4CF89400F627A7 /* IbottaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbottaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7F5B222A4CF89400F627A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E7F5B242A4CF89400F627A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				8E59CD382A50D0A0005F6962 /* OffersViewModel.swift */,
 				8E59CD3A2A50D0B1005F6962 /* DetailsViewModel.swift */,
+				8E59CD432A50DCF4005F6962 /* OffersCollectionViewCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			files = (
 				8E59CD422A50D473005F6962 /* ImageCache.swift in Sources */,
 				8E7F5B272A4CF89400F627A7 /* ViewController.swift in Sources */,
+				8E59CD442A50DCF4005F6962 /* OffersCollectionViewCellViewModel.swift in Sources */,
 				8E59CD392A50D0A0005F6962 /* OffersViewModel.swift in Sources */,
 				8E59CD402A50D445005F6962 /* DataParsingWorker.swift in Sources */,
 				8E7F5B232A4CF89400F627A7 /* AppDelegate.swift in Sources */,
