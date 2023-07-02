@@ -11,12 +11,17 @@ import UIKit
 class OffersViewModel {
     
     private let parser = DataParsingWorker()
+    private var offers: [OffersModel]?
+    
+    // data passing closures
+    // var updateFavorite: ((OfferDetailsViewModel) -> Void)?
     
     func fetchOffersData() -> [OffersModel]? {
         
-        guard let results = parser.parseJSONFromFile() else { return nil }
+        guard let result = parser.parseJSONFromFile() else { return nil }
+        self.offers = result
         
-        return results
+        return self.offers
     }
     
     func buildCollectionView() -> UICollectionView {

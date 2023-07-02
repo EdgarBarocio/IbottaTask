@@ -10,6 +10,8 @@ import UIKit
 
 class OfferDetailsView: UIViewController {
     
+    var model:OfferDetailsViewModel?
+    
     private var offerImage: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .lightGray
@@ -115,7 +117,18 @@ class OfferDetailsView: UIViewController {
     }
     
     @objc func favoritePressed() {
-        favoriteToggle.backgroundColor = .green
+        guard let boolVale = self.model?.favorite else { return }
+        if boolVale {
+            favoriteToggle.backgroundColor = .lightGray
+            self.model?.favorite = false
+        } else {
+            favoriteToggle.backgroundColor = .green
+            self.model?.favorite = true
+        }
+        
+        if let safeModel = self.model {
+            model?.updateOfferState(model: safeModel)
+        }
     }
     
     func updateInformation(_ viewModel: OfferDetailsViewModel) {
@@ -123,9 +136,9 @@ class OfferDetailsView: UIViewController {
         self.valueLabel.text = viewModel.offerValue
         self.offerDetailsLabel.text = viewModel.offerDetails
         self.termsLabel.text = viewModel.offerTerms
-        
+        self.favoriteToggle.backgroundColor = viewModel.favorite ?? false ? .green : .lightGray
         self.offerImage.sd_setImage(with: URL(string:viewModel.offerURL ?? ""), placeholderImage: UIImage(named: "Empty"))
         
-        
+        self.model = viewModel
     }
 }

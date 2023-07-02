@@ -57,15 +57,34 @@ extension OffersViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let details = OfferDetailsView()
-        let offerDetailViewModel = OfferDetailsViewModel(offerName: offersData?[indexPath.row].name,
-                                                    offerValue: offersData?[indexPath.row].currentValue,
-                                                    offerDetals: offersData?[indexPath.row].description,
-                                                    offerTerms: offersData?[indexPath.row].terms,
-                                                    offerURL: offersData?[indexPath.row].url,
-                                                    favorite: offersData?[indexPath.row].isFavorite)
+        let offerDetailViewModel = OfferDetailsViewModel( offerID: offersData?[indexPath.row].id,
+                                                          offerName: offersData?[indexPath.row].name,
+                                                          offerValue: offersData?[indexPath.row].currentValue,
+                                                          offerDetals: offersData?[indexPath.row].description,
+                                                          offerTerms: offersData?[indexPath.row].terms,
+                                                          offerURL: offersData?[indexPath.row].url,
+                                                          favorite: offersData?[indexPath.row].isFavorite)
+        offerDetailViewModel.delegate = self
         details.updateInformation(offerDetailViewModel)
         
         self.navigationController?.pushViewController(details, animated: true)
     }
+}
+
+extension OffersViewController: FavoriteUpdateProtocol {
+    func updateOfferState(updatedOffer: OfferDetailsViewModel) {
+        if let index = self.offersData?.firstIndex(where: {$0.id == updatedOffer.offerID}) {
+            let updated = OffersModel(id: updatedOffer.offerID,
+                                      url: updatedOffer.offerURL,
+                                      name: updatedOffer.offerName,
+                                      description: updatedOffer.offerDetails,
+                                      terms: updatedOffer.offerTerms,
+                                      currentValue: updatedOffer.offerValue,
+                                      isFavorite: updatedOffer.favorite)
+            self.offersData?[index] = updated
+            self.offersCollectionView.reloadData()
+        }
+    }
+    
 }
 

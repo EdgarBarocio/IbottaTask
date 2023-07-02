@@ -8,6 +8,7 @@
 import Foundation
 
 class OfferDetailsViewModel {
+    var offerID: String?
     var offerName: String?
     var offerValue: String?
     var offerDetails: String?
@@ -15,12 +16,19 @@ class OfferDetailsViewModel {
     var offerURL: String?
     var favorite: Bool?
     
-    init(offerName: String? = nil, offerValue: String? = nil, offerDetals: String? = nil, offerTerms: String? = nil, offerURL: String? = nil, favorite: Bool? = nil) {
+    weak var delegate: (FavoriteUpdateProtocol)?
+    
+    init(offerID: String? = nil, offerName: String? = nil, offerValue: String? = nil, offerDetals: String? = nil, offerTerms: String? = nil, offerURL: String? = nil, favorite: Bool? = nil) {
+        self.offerID = offerID
         self.offerName = offerName
         self.offerValue = offerValue
         self.offerDetails = offerDetals
         self.offerTerms = offerTerms
         self.offerURL = offerURL
         self.favorite = favorite
+    }
+    
+    func updateOfferState(model: OfferDetailsViewModel) {
+        delegate?.updateOfferState(updatedOffer: model)
     }
 }
