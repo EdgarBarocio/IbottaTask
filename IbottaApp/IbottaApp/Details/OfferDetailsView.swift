@@ -97,11 +97,11 @@ class OfferDetailsView: UIViewController {
         
         offerNameLabel.topAnchor.constraint(equalTo: favoriteToggle.bottomAnchor, constant: 5.0).isActive = true
         offerNameLabel.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor, constant: 12.0 ).isActive = true
-        offerNameLabel.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor, constant: -UIScreen.main.bounds.size.width/2).isActive = true
+        offerNameLabel.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor, constant: -12.0).isActive = true
         
         valueLabel.topAnchor.constraint(equalTo: offerNameLabel.bottomAnchor, constant: 5.0).isActive = true
         valueLabel.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor, constant: 12.0).isActive = true
-        valueLabel.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor, constant: -UIScreen.main.bounds.size.width/2).isActive = true
+        valueLabel.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor, constant: -12.0).isActive = true
 
         offerDetailsLabel.topAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: 5.0).isActive = true
         offerDetailsLabel.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor, constant: 12.0).isActive = true
@@ -117,6 +117,11 @@ class OfferDetailsView: UIViewController {
     }
     
     func updateInformation(_ viewModel: OfferDetailsViewModel) {
+        self.offerNameLabel.text = viewModel.offerName
+        self.valueLabel.text = viewModel.offerValue
+        self.offerDetailsLabel.text = viewModel.offerDetails
+        self.termsLabel.text = viewModel.offerTerms
         
+        self.offerImage.sd_setImage(with: URL(string:viewModel.offerURL ?? ""), placeholderImage: UIImage(named: "Empty"))
     }
 }

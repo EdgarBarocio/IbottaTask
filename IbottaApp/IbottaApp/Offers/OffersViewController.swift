@@ -57,6 +57,13 @@ extension OffersViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let details = OfferDetailsView()
+        let offerDetailViewModel = OfferDetailsViewModel(offerName: offersData?[indexPath.row].name,
+                                                    offerValue: offersData?[indexPath.row].currentValue,
+                                                    offerDetals: offersData?[indexPath.row].description,
+                                                    offerTerms: offersData?[indexPath.row].terms,
+                                                    offerURL: offersData?[indexPath.row].url,
+                                                    favorite: offersData?[indexPath.row].isFavorite)
+        details.updateInformation(offerDetailViewModel)
         
         self.navigationController?.pushViewController(details, animated: true)
     }

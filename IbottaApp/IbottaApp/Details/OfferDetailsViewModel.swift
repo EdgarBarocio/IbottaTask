@@ -10,10 +10,17 @@ import Foundation
 class OfferDetailsViewModel {
     var offerName: String?
     var offerValue: String?
-    var offerDetals: String?
+    var offerDetails: String?
     var offerTerms: String?
     var offerURL: String?
     var favorite: Bool?
     
-    
+    init(offerName: String? = nil, offerValue: String? = nil, offerDetals: String? = nil, offerTerms: String? = nil, offerURL: String? = nil, favorite: Bool? = nil) {
+        self.offerName = offerName
+        self.offerValue = offerValue
+        self.offerDetails = offerDetals
+        self.offerTerms = offerTerms
+        self.offerURL = offerURL
+        self.favorite = favorite
+    }
 }
