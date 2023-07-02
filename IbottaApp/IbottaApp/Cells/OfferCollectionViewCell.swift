@@ -55,7 +55,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
     }()
     
     // Button to represent the state of a favorite offer. Green for favorite, invisible for regular
-    private var favoritedView: UIButton = {
+    var favoritedView: UIButton = {
         let view = UIButton()
         view.backgroundColor = .green
         view.frame = CGRect(x: 0, y: 0, width: 10, height: 10)

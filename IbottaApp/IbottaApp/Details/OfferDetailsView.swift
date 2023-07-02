@@ -78,7 +78,7 @@ class OfferDetailsView: UIViewController {
     }()
     
     // Button that activates or de-activates the Favorite property of the offer
-    private var favoriteToggle: UIButton = {
+    var favoriteToggle: UIButton = {
         let uiButton = UIButton()
         uiButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         uiButton.layer.cornerRadius = 0.5 * uiButton.bounds.size.width
@@ -141,7 +141,7 @@ class OfferDetailsView: UIViewController {
         Private func wired as the action of the Favorites button, setting or clearing the Favorite state of the offer.
         Calls the updateOffersState funciton of the OfferDetailsViewModel that updates the Favorite state on the CollectionView
      */
-    @objc private func favoritePressed() {
+    @objc func favoritePressed() {
         guard let boolVale = self.model?.favorite else { return }
         if boolVale {
             favoriteToggle.backgroundColor = .lightGray
