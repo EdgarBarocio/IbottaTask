@@ -8,15 +8,23 @@
 import Foundation
 import UIKit
 
-class OffersViewModel {
+/**
+    View model for the OffersViewControl.
+    Fetches the json file to convert to displayable data
+    Builds the collection view for data display
+ */
+struct OffersViewModel {
     
+    // Worker object to fetch and encode Offers.json
     private let parser = DataParsingWorker()
     private var offers: [OffersModel]?
     
-    // data passing closures
-    // var updateFavorite: ((OfferDetailsViewModel) -> Void)?
-    
-    func fetchOffersData() -> [OffersModel]? {
+    /**
+    Function to convert local Offers.json file into data to display on OffersViewController
+     
+     - Returns:Array of OffersModel, result of json decoding.
+     */
+    mutating func fetchOffersData() -> [OffersModel]? {
         
         guard let result = parser.parseJSONFromFile() else { return nil }
         self.offers = result
@@ -24,6 +32,11 @@ class OffersViewModel {
         return self.offers
     }
     
+    /**
+    Function that builds the UICollectionView to be used on the OffersViewController to display all offers
+     
+     - Returns:UICollectionView to display Offers
+     */
     func buildCollectionView() -> UICollectionView {
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()

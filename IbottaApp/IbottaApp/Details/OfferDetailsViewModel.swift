@@ -7,7 +7,10 @@
 
 import Foundation
 
-class OfferDetailsViewModel {
+/**
+    OfferDetailsViewModel that displays the offers from the OffersModel array for the OfferDetailsView
+ */
+struct OfferDetailsViewModel {
     var offerID: String?
     var offerName: String?
     var offerValue: String?
@@ -16,8 +19,12 @@ class OfferDetailsViewModel {
     var offerURL: String?
     var favorite: Bool?
     
+    // Delegate for the FavoriteUpdateProtocol
     weak var delegate: (FavoriteUpdateProtocol)?
     
+    /**
+        Initializer for the OfferDetailsViewModel, all parameters opcional
+     */
     init(offerID: String? = nil, offerName: String? = nil, offerValue: String? = nil, offerDetals: String? = nil, offerTerms: String? = nil, offerURL: String? = nil, favorite: Bool? = nil) {
         self.offerID = offerID
         self.offerName = offerName
@@ -28,6 +35,12 @@ class OfferDetailsViewModel {
         self.favorite = favorite
     }
     
+    /**
+        Function that calls the updateOffersState protocol for all classes that set themself as the view model delegate.
+     
+     - Parameters:
+        - model: OfferDetailsViewModel with the updated favorite parameter
+     */
     func updateOfferState(model: OfferDetailsViewModel) {
         delegate?.updateOfferState(updatedOffer: model)
     }

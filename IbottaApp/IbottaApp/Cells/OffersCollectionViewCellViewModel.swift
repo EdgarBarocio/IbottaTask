@@ -7,6 +7,10 @@
 
 import Foundation
 
+/**
+    View model for the OffersCollectionViewCell.
+    Initializes itself with the partial content of the OffersModel, only for data display purposes
+ */
 struct OffersCollectionViewCellViewModel {
     var url: String?
     var name: String?

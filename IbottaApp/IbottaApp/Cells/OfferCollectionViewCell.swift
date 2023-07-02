@@ -9,10 +9,18 @@ import Foundation
 import UIKit
 import SDWebImage
 
+/**
+    CollectionViewCell that displays the offers from the OffersModel array.
+    External Dependency: SDWebImage, used to download and cache the offer images.
+ */
 class OfferCollectionViewCell: UICollectionViewCell {
     
+    // Cell identifier
     static let cellIdentifier = "OfferCell"
     
+    // Private UI elements of the cell, all created as functions.
+    
+    // Image of the product offer
     private var offerImage: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .lightGray
@@ -24,6 +32,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
+    // Label that displays the value of the current offer
     private var valueLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-DemiBold", size: 12)
@@ -33,6 +42,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    // Label that displays the name of the product
     private var offerNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-Regular", size: 11)
@@ -44,6 +54,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    // Button to represent the state of a favorite offer. Green for favorite, invisible for regular
     private var favoritedView: UIButton = {
         let view = UIButton()
         view.backgroundColor = .green
@@ -51,6 +62,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
         view.layer.cornerRadius = 0.5 * view.bounds.size.width
         view.clipsToBounds = true
         view.isHidden = false
+        view.isUserInteractionEnabled = false
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -65,6 +77,9 @@ class OfferCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /**
+        Privatre function that adds all the subviews to the custom OfferCollectionViewCell and configures all layout constrainst for each element
+     */
     private func addViews() {
         contentView.addSubview(offerImage)
         contentView.addSubview(valueLabel)
@@ -91,6 +106,12 @@ class OfferCollectionViewCell: UICollectionViewCell {
         offerNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
     }
     
+    /**
+        Function that configures the elements of the OffersCollectionViewCell for data display
+     
+     - Parameters:
+        - viewModel: OffersCollectionViewCellViewModel initialized with all the information to display on the cell
+     */
     public func configure(_ viewModel: OffersCollectionViewCellViewModel) {
         self.valueLabel.text = viewModel.value
         self.offerNameLabel.text = viewModel.name
