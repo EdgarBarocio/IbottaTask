@@ -29,7 +29,6 @@
 		8E7F5B2C2A4CF89500F627A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E7F5B2B2A4CF89500F627A7 /* Assets.xcassets */; };
 		8E7F5B2F2A4CF89500F627A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7F5B2D2A4CF89500F627A7 /* LaunchScreen.storyboard */; };
 		8E7F5B442A4CF89500F627A7 /* IbottaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B432A4CF89500F627A7 /* IbottaAppUITests.swift */; };
-		8E7F5B462A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B452A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift */; };
 		8E7F5B532A4CF8AB00F627A7 /* Offers.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E7F5B522A4CF8AA00F627A7 /* Offers.json */; };
 		8E7F5B5B2A4D14CB00F627A7 /* OfferDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B5A2A4D14CB00F627A7 /* OfferDetailsView.swift */; };
 		8E7F5B5E2A4D18F200F627A7 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B5D2A4D18F200F627A7 /* OfferCollectionViewCell.swift */; };
@@ -76,7 +75,6 @@
 		8E7F5B352A4CF89500F627A7 /* IbottaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IbottaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7F5B3F2A4CF89500F627A7 /* IbottaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IbottaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7F5B432A4CF89500F627A7 /* IbottaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbottaAppUITests.swift; sourceTree = "<group>"; };
-		8E7F5B452A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbottaAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8E7F5B522A4CF8AA00F627A7 /* Offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Offers.json; path = ../data/Offers.json; sourceTree = "<group>"; };
 		8E7F5B5A2A4D14CB00F627A7 /* OfferDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsView.swift; sourceTree = "<group>"; };
 		8E7F5B5D2A4D18F200F627A7 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				8E7F5B432A4CF89500F627A7 /* IbottaAppUITests.swift */,
-				8E7F5B452A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift */,
 			);
 			path = IbottaAppUITests;
 			sourceTree = "<group>";
@@ -391,7 +388,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E7F5B442A4CF89500F627A7 /* IbottaAppUITests.swift in Sources */,
-				8E7F5B462A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

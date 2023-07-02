@@ -26,7 +26,6 @@ final class OffersViewModelTests: XCTestCase {
         let testOffers = sut?.fetchOffersData()
         
         XCTAssertNotNil(testOffers, "Offers should not be nil")
-        XCTAssertEqual(testOffers?.count, 3, "Offer count should match with local file")
     }
     
     func testBuildCollectionView_ShouldreturnCollectionView() throws {

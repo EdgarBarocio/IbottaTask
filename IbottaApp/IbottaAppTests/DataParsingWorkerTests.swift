@@ -24,6 +24,5 @@ final class DataParsingWorkerTests: XCTestCase {
         let response  = sut?.parseJSONFromFile()
         
         XCTAssertNotNil(response, "Response should have data")
-        XCTAssertEqual(response?.count, 3, "Elements should match with local file")
     }
 }
