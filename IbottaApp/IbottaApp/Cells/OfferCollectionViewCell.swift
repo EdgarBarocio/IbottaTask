@@ -36,7 +36,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
     private var valueLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-DemiBold", size: 12)
-        //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
+        label.textColor = UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)
         label.text = "Offer Value"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -46,7 +46,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
     private var offerNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-Regular", size: 11)
-        //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
+        label.textColor = UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)
         label.text = "Offer Name"
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping

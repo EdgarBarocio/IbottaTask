@@ -37,7 +37,7 @@ class OfferDetailsView: UIViewController {
     private var valueLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-DemiBold", size: 12)
-        //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
+        label.textColor = UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)
         label.text = "Offer Value"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -47,7 +47,7 @@ class OfferDetailsView: UIViewController {
     private var offerNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-Regular", size: 22)
-        //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
+        label.textColor = UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)
         label.text = "Offer Name"
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
@@ -60,7 +60,7 @@ class OfferDetailsView: UIViewController {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-Regular", size: 25)
         label.numberOfLines = 0
-        //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
+        label.textColor = UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)
         label.text = "Offer Details"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -71,7 +71,7 @@ class OfferDetailsView: UIViewController {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-DemiBold", size: 12)
         label.numberOfLines = 0
-        //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
+        label.textColor = UIColor(red: 74.0/255.0, green: 74.0/255.0, blue: 74.0/255.0, alpha: 1.0)
         label.text = "Offer terms"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
