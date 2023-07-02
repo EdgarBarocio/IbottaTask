@@ -19,8 +19,6 @@ class OffersViewController: UIViewController {
         
         buildCollectionView()
     }
-
-
 }
 
 extension OffersViewController: UICollectionViewDelegate, UICollectionViewDataSource {

@@ -88,7 +88,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
         offerNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
     }
     
-    func updateInformation() {
+    public func configure(_ viewModel: OffersCollectionViewCellViewModel) {
         
     }
 }

@@ -49,6 +49,16 @@ class OfferDetailsView: UIViewController {
         return label
     }()
     
+    private var termsLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "AvenirNext-DemiBold", size: 10)
+        label.numberOfLines = 0
+        //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
+        label.text = "Offer terms"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private var favoriteToggle: UIButton = {
         let uiButton = UIButton()
         uiButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
@@ -73,6 +83,7 @@ class OfferDetailsView: UIViewController {
         view.addSubview(offerNameLabel)
         view.addSubview(valueLabel)
         view.addSubview(offerDetailsLabel)
+        view.addSubview(termsLabel)
         favoriteToggle.addTarget(self, action: #selector(favoritePressed), for: .touchUpInside)
         
         // Constraints
@@ -95,6 +106,10 @@ class OfferDetailsView: UIViewController {
         offerDetailsLabel.topAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: 5.0).isActive = true
         offerDetailsLabel.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor, constant: 12.0).isActive = true
         offerDetailsLabel.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor, constant: -12.0).isActive = true
+        
+        termsLabel.topAnchor.constraint(equalTo: offerDetailsLabel.bottomAnchor, constant: 5.0).isActive = true
+        termsLabel.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor, constant: 12.0).isActive = true
+        termsLabel.trailingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.trailingAnchor, constant: -12.0).isActive = true
     }
     
     @objc func favoritePressed() {

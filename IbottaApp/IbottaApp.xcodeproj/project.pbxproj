@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E59CD392A50D0A0005F6962 /* OffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD382A50D0A0005F6962 /* OffersViewModel.swift */; };
-		8E59CD3B2A50D0B1005F6962 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD3A2A50D0B1005F6962 /* DetailsViewModel.swift */; };
 		8E59CD3F2A50D445005F6962 /* ServiceCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD3D2A50D445005F6962 /* ServiceCalls.swift */; };
 		8E59CD402A50D445005F6962 /* DataParsingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD3E2A50D445005F6962 /* DataParsingWorker.swift */; };
 		8E59CD422A50D473005F6962 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD412A50D473005F6962 /* ImageCache.swift */; };
-		8E59CD442A50DCF4005F6962 /* OffersCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD432A50DCF4005F6962 /* OffersCollectionViewCellViewModel.swift */; };
+		8E59CD462A513565005F6962 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD452A513565005F6962 /* DetailsViewModel.swift */; };
+		8E59CD482A513576005F6962 /* OffersCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD472A513576005F6962 /* OffersCollectionViewCellViewModel.swift */; };
+		8E59CD4D2A5135BC005F6962 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD4A2A5135BC005F6962 /* OffersViewController.swift */; };
+		8E59CD4E2A5135BC005F6962 /* OffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD4B2A5135BC005F6962 /* OffersViewModel.swift */; };
+		8E59CD4F2A5135BC005F6962 /* OffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59CD4C2A5135BC005F6962 /* OffersModel.swift */; };
 		8E7F5B232A4CF89400F627A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B222A4CF89400F627A7 /* AppDelegate.swift */; };
 		8E7F5B252A4CF89400F627A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B242A4CF89400F627A7 /* SceneDelegate.swift */; };
-		8E7F5B272A4CF89400F627A7 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B262A4CF89400F627A7 /* OffersViewController.swift */; };
 		8E7F5B2A2A4CF89400F627A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7F5B282A4CF89400F627A7 /* Main.storyboard */; };
 		8E7F5B2C2A4CF89500F627A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E7F5B2B2A4CF89500F627A7 /* Assets.xcassets */; };
 		8E7F5B2F2A4CF89500F627A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7F5B2D2A4CF89500F627A7 /* LaunchScreen.storyboard */; };
@@ -23,7 +24,6 @@
 		8E7F5B442A4CF89500F627A7 /* IbottaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B432A4CF89500F627A7 /* IbottaAppUITests.swift */; };
 		8E7F5B462A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B452A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift */; };
 		8E7F5B532A4CF8AB00F627A7 /* Offers.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E7F5B522A4CF8AA00F627A7 /* Offers.json */; };
-		8E7F5B562A4CF93100F627A7 /* OffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B552A4CF93100F627A7 /* OffersModel.swift */; };
 		8E7F5B5B2A4D14CB00F627A7 /* OfferDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B5A2A4D14CB00F627A7 /* OfferDetailsView.swift */; };
 		8E7F5B5E2A4D18F200F627A7 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F5B5D2A4D18F200F627A7 /* OfferCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -46,16 +46,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8E59CD382A50D0A0005F6962 /* OffersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewModel.swift; sourceTree = "<group>"; };
-		8E59CD3A2A50D0B1005F6962 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		8E59CD3D2A50D445005F6962 /* ServiceCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCalls.swift; sourceTree = "<group>"; };
 		8E59CD3E2A50D445005F6962 /* DataParsingWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParsingWorker.swift; sourceTree = "<group>"; };
 		8E59CD412A50D473005F6962 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		8E59CD432A50DCF4005F6962 /* OffersCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		8E59CD452A513565005F6962 /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		8E59CD472A513576005F6962 /* OffersCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		8E59CD4A2A5135BC005F6962 /* OffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
+		8E59CD4B2A5135BC005F6962 /* OffersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewModel.swift; sourceTree = "<group>"; };
+		8E59CD4C2A5135BC005F6962 /* OffersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersModel.swift; sourceTree = "<group>"; };
 		8E7F5B1F2A4CF89400F627A7 /* IbottaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IbottaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7F5B222A4CF89400F627A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E7F5B242A4CF89400F627A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E7F5B262A4CF89400F627A7 /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
 		8E7F5B292A4CF89400F627A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E7F5B2B2A4CF89500F627A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E7F5B2E2A4CF89500F627A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		8E7F5B432A4CF89500F627A7 /* IbottaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbottaAppUITests.swift; sourceTree = "<group>"; };
 		8E7F5B452A4CF89500F627A7 /* IbottaAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbottaAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8E7F5B522A4CF8AA00F627A7 /* Offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Offers.json; path = ../data/Offers.json; sourceTree = "<group>"; };
-		8E7F5B552A4CF93100F627A7 /* OffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersModel.swift; sourceTree = "<group>"; };
 		8E7F5B5A2A4D14CB00F627A7 /* OfferDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsView.swift; sourceTree = "<group>"; };
 		8E7F5B5D2A4D18F200F627A7 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,16 +96,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E59CD372A50D090005F6962 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				8E59CD382A50D0A0005F6962 /* OffersViewModel.swift */,
-				8E59CD3A2A50D0B1005F6962 /* DetailsViewModel.swift */,
-				8E59CD432A50DCF4005F6962 /* OffersCollectionViewCellViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		8E59CD3C2A50D445005F6962 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +104,16 @@
 				8E59CD412A50D473005F6962 /* ImageCache.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8E59CD492A5135BC005F6962 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				8E59CD4A2A5135BC005F6962 /* OffersViewController.swift */,
+				8E59CD4B2A5135BC005F6962 /* OffersViewModel.swift */,
+				8E59CD4C2A5135BC005F6962 /* OffersModel.swift */,
+			);
+			path = Offers;
 			sourceTree = "<group>";
 		};
 		8E7F5B162A4CF89400F627A7 = {
@@ -140,14 +140,12 @@
 		8E7F5B212A4CF89400F627A7 /* IbottaApp */ = {
 			isa = PBXGroup;
 			children = (
+				8E59CD492A5135BC005F6962 /* Offers */,
 				8E59CD3C2A50D445005F6962 /* Helpers */,
-				8E59CD372A50D090005F6962 /* ViewModels */,
 				8E7F5B5C2A4D18D300F627A7 /* Cells */,
 				8E7F5B592A4D14B800F627A7 /* Details */,
-				8E7F5B542A4CF91D00F627A7 /* Models */,
 				8E7F5B222A4CF89400F627A7 /* AppDelegate.swift */,
 				8E7F5B242A4CF89400F627A7 /* SceneDelegate.swift */,
-				8E7F5B262A4CF89400F627A7 /* OffersViewController.swift */,
 				8E7F5B282A4CF89400F627A7 /* Main.storyboard */,
 				8E7F5B2B2A4CF89500F627A7 /* Assets.xcassets */,
 				8E7F5B2D2A4CF89500F627A7 /* LaunchScreen.storyboard */,
@@ -173,17 +171,10 @@
 			path = IbottaAppUITests;
 			sourceTree = "<group>";
 		};
-		8E7F5B542A4CF91D00F627A7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				8E7F5B552A4CF93100F627A7 /* OffersModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		8E7F5B592A4D14B800F627A7 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				8E59CD452A513565005F6962 /* DetailsViewModel.swift */,
 				8E7F5B5A2A4D14CB00F627A7 /* OfferDetailsView.swift */,
 			);
 			path = Details;
@@ -192,6 +183,7 @@
 		8E7F5B5C2A4D18D300F627A7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8E59CD472A513576005F6962 /* OffersCollectionViewCellViewModel.swift */,
 				8E7F5B5D2A4D18F200F627A7 /* OfferCollectionViewCell.swift */,
 			);
 			path = Cells;
@@ -330,17 +322,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E59CD422A50D473005F6962 /* ImageCache.swift in Sources */,
-				8E7F5B272A4CF89400F627A7 /* OffersViewController.swift in Sources */,
-				8E59CD442A50DCF4005F6962 /* OffersCollectionViewCellViewModel.swift in Sources */,
-				8E59CD392A50D0A0005F6962 /* OffersViewModel.swift in Sources */,
 				8E59CD402A50D445005F6962 /* DataParsingWorker.swift in Sources */,
 				8E7F5B232A4CF89400F627A7 /* AppDelegate.swift in Sources */,
+				8E59CD462A513565005F6962 /* DetailsViewModel.swift in Sources */,
 				8E7F5B5B2A4D14CB00F627A7 /* OfferDetailsView.swift in Sources */,
+				8E59CD4E2A5135BC005F6962 /* OffersViewModel.swift in Sources */,
+				8E59CD482A513576005F6962 /* OffersCollectionViewCellViewModel.swift in Sources */,
 				8E7F5B5E2A4D18F200F627A7 /* OfferCollectionViewCell.swift in Sources */,
 				8E59CD3F2A50D445005F6962 /* ServiceCalls.swift in Sources */,
-				8E59CD3B2A50D0B1005F6962 /* DetailsViewModel.swift in Sources */,
-				8E7F5B562A4CF93100F627A7 /* OffersModel.swift in Sources */,
 				8E7F5B252A4CF89400F627A7 /* SceneDelegate.swift in Sources */,
+				8E59CD4F2A5135BC005F6962 /* OffersModel.swift in Sources */,
+				8E59CD4D2A5135BC005F6962 /* OffersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
