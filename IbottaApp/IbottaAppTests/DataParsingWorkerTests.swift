@@ -20,7 +20,7 @@ final class DataParsingWorkerTests: XCTestCase {
         sut = nil
     }
 
-    func testExample() throws {
+    func testDataParser_ShouldReturnValue() throws {
         let response  = sut?.parseJSONFromFile()
         
         XCTAssertNotNil(response, "Response should have data")

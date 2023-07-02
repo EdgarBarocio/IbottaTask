@@ -21,7 +21,7 @@ final class OfferDetailsViewTests: XCTestCase {
         sut = nil
     }
 
-    func testExample() throws {
+    func testOfferDetailsView_ShouldUpdateFavoriteAndModel() throws {
         let mockObject = OfferDetailsViewModel(offerID: "Id",
                                                offerName: "Name",
                                                offerValue: "Value",
