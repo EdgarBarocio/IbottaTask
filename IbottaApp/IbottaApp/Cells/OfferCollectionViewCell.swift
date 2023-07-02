@@ -10,12 +10,12 @@ import UIKit
 
 class OfferCollectionViewCell: UICollectionViewCell {
     
-    let offerImage: UIImageView = {
+    var details: OffersModel?
+    
+    private var offerImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.lightGray
-        let width = UIScreen.main.bounds.size.width
-        imageView.frame = CGRectMake(0, 0, ((width / 2) - 32), 100)
-        imageView.image = UIImage(systemName: "Globe")
+        imageView.backgroundColor = .lightGray
+        imageView.image = UIImage(named: "Empty")
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 5.0
         imageView.clipsToBounds = true
@@ -23,7 +23,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    let valueLabel: UILabel = {
+    private var valueLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-DemiBold", size: 12)
         //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
@@ -32,7 +32,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let offerNameLabel: UILabel = {
+    private var offerNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-Regular", size: 11)
         //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
@@ -41,13 +41,15 @@ class OfferCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let stackView: UIStackView = {
-        let sv = UIStackView()
-        sv.axis  = NSLayoutConstraint.Axis.vertical
-        sv.alignment = UIStackView.Alignment.center
-        sv.distribution = UIStackView.Distribution.fillEqually
-        sv.translatesAutoresizingMaskIntoConstraints = false;
-        return sv
+    private var favoritedView: UIButton = {
+        let view = UIButton()
+        view.backgroundColor = .green
+        view.frame = CGRect(x: 0, y: 0, width: 10, height: 10)
+        view.layer.cornerRadius = 0.5 * view.bounds.size.width
+        view.clipsToBounds = true
+        view.isHidden = false
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     override init(frame: CGRect) {
@@ -61,13 +63,32 @@ class OfferCollectionViewCell: UICollectionViewCell {
     }
     
     private func addViews() {
-        addSubview(stackView)
+        contentView.addSubview(offerImage)
+        contentView.addSubview(valueLabel)
+        contentView.addSubview(offerNameLabel)
+        contentView.addSubview(favoritedView)
         
-        stackView.addArrangedSubview(offerImage)
-        stackView.addArrangedSubview(valueLabel)
-        stackView.addArrangedSubview(offerNameLabel)
+        //Constraints
+        offerImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 1).isActive = true
+        offerImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 6.0).isActive = true
+        offerImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -6.0).isActive = true
+        offerImage.heightAnchor.constraint(equalToConstant: self.frame.height - 70).isActive = true
         
+        favoritedView.topAnchor.constraint(equalTo: self.topAnchor, constant: 3).isActive = true
+        favoritedView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -9.0).isActive = true
+        favoritedView.widthAnchor.constraint(equalToConstant: 10.0).isActive = true
+        favoritedView.heightAnchor.constraint(equalToConstant: 10.0).isActive = true
         
+        valueLabel.topAnchor.constraint(equalTo: offerImage.bottomAnchor, constant: 8.0).isActive = true
+        valueLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        valueLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        
+        offerNameLabel.topAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: 3.0).isActive = true
+        offerNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        offerNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+    }
+    
+    func updateInformation() {
         
     }
 }

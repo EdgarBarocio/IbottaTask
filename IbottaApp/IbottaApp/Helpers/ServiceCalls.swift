@@ -25,6 +25,13 @@ class ServiceCalls {
     func downloadImage(url: String, completion:@escaping ImageDownloadResult) {
         dataTask?.cancel()
         
+        let cache = ImageCache()
+        
+        if let cachedImageData = cache.getImageFromCache(url) {
+            completion(cachedImageData)
+            return
+        }
+        
         guard let imageURL = URL(string: url) else {
             return
             
@@ -41,6 +48,9 @@ class ServiceCalls {
                 let data = data,
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
+                
+                //store the data in cache
+                cache.storeImageInCache(url, data)
                 
                 DispatchQueue.main.async {
                     completion(data)

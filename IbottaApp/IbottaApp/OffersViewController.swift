@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OffersViewController: UIViewController {
 
     var offersCollectionView: UICollectionView!
     
@@ -23,16 +23,16 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension OffersViewController: UICollectionViewDelegate, UICollectionViewDataSource {
    
     private func buildCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
         let width = UIScreen.main.bounds.size.width
         //calculation of cell size
-        layout.itemSize = CGSize(width: ((width / 2) - 32)   , height: 150)
+        layout.itemSize = CGSize(width: ((width / 2) - 32), height: 200)
         layout.minimumInteritemSpacing = 0.0
-        layout.minimumLineSpacing = 24.0
+        layout.minimumLineSpacing = 0.0
         
         self.offersCollectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
         self.offersCollectionView.dataSource = self
@@ -49,7 +49,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfferCell", for: indexPath)
-        myCell.backgroundColor = UIColor.blue
         return myCell
     }
     
