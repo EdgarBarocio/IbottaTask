@@ -12,11 +12,11 @@ class OffersViewModel {
     
     private let parser = DataParsingWorker()
     
-    func fetchOffersData() {
+    func fetchOffersData() -> [OffersModel]? {
         
-        guard let results = parser.parseJSONFromFile() else { return }
+        guard let results = parser.parseJSONFromFile() else { return nil }
         
-        print(results)
+        return results
     }
     
     func buildCollectionView() -> UICollectionView {
@@ -36,6 +36,4 @@ class OffersViewModel {
         
         return collectionView
     }
-    
-    
 }

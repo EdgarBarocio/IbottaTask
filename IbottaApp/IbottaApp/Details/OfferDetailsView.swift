@@ -115,4 +115,8 @@ class OfferDetailsView: UIViewController {
     @objc func favoritePressed() {
         favoriteToggle.backgroundColor = .green
     }
+    
+    func updateInformation(_ viewModel: OfferDetailsViewModel) {
+        
+    }
 }

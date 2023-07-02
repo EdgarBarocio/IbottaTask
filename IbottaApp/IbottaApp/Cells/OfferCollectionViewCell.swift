@@ -7,10 +7,10 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class OfferCollectionViewCell: UICollectionViewCell {
     
-    var details: OffersModel?
     static let cellIdentifier = "OfferCell"
     
     private var offerImage: UIImageView = {
@@ -38,6 +38,8 @@ class OfferCollectionViewCell: UICollectionViewCell {
         label.font = UIFont(name: "AvenirNext-Regular", size: 11)
         //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
         label.text = "Offer Name"
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -90,6 +92,10 @@ class OfferCollectionViewCell: UICollectionViewCell {
     }
     
     public func configure(_ viewModel: OffersCollectionViewCellViewModel) {
+        self.valueLabel.text = viewModel.value
+        self.offerNameLabel.text = viewModel.name
+        self.favoritedView.isHidden = viewModel.isFavorite ?? false ? false : true
         
+        self.offerImage.sd_setImage(with: URL(string:viewModel.url ?? ""), placeholderImage: UIImage(named: "Empty"))
     }
 }

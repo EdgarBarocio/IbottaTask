@@ -8,5 +8,12 @@
 import Foundation
 
 class OfferDetailsViewModel {
+    var offerName: String?
+    var offerValue: String?
+    var offerDetals: String?
+    var offerTerms: String?
+    var offerURL: String?
+    var favorite: Bool?
+    
     
 }

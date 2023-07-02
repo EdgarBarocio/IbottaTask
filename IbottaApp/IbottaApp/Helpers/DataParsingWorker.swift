@@ -16,6 +16,7 @@ class DataParsingWorker {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let decoded = try decoder.decode([OffersModel].self, from: data)
+                
                 return decoded
             } catch {
                 print(error)
