@@ -102,21 +102,17 @@ extension OffersViewController: FavoriteUpdateProtocol {
     
     /**
         Protocol implementation that updates the selected Offer with the result of the activation or de-actinvation
-        of the favorite toggle
+        of the favorite toggle.
+        Takes the offer index, updates the favorite flag and reloads the CollectionView
      
      - Parameters:
         - updatedOffer: OfferDetailsViewModel containind the updated favorite flag
      */
     func updateOfferState(updatedOffer: OfferDetailsViewModel) {
         if let index = self.offersData?.firstIndex(where: {$0.id == updatedOffer.offerID}) {
-            let updated = OffersModel(id: updatedOffer.offerID,
-                                      url: updatedOffer.offerURL,
-                                      name: updatedOffer.offerName,
-                                      description: updatedOffer.offerDetails,
-                                      terms: updatedOffer.offerTerms,
-                                      currentValue: updatedOffer.offerValue,
-                                      isFavorite: updatedOffer.favorite)
-            self.offersData?[index] = updated
+            var toUpdateModel = self.offersData?[index]
+            toUpdateModel?.isFavorite = updatedOffer.favorite
+            self.offersData?[index] = toUpdateModel ?? OffersModel()
             self.offersCollectionView.reloadData()
         }
     }
