@@ -6,30 +6,49 @@
 //
 
 import XCTest
+@testable import IbottaApp
 
 final class OffersCollectionViewCellViewModelTests: XCTestCase {
 
+    var sut:OffersCollectionViewCellViewModel?
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = OffersCollectionViewCellViewModel()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testOffersCollectionViewCellViewModelInitializer_valuesShouldMatch() throws {
+        sut = OffersCollectionViewCellViewModel(url: "testURL",
+                                                name: "testName",
+                                                value: "testValue",
+                                                isFavorite: false)
+        
+        XCTAssertNotNil(sut?.url, "URL Should not be nil")
+        XCTAssertNotNil(sut?.name, "Name Should not be nil")
+        XCTAssertNotNil(sut?.value, "Value Should not be nil")
+        if let falseValue = sut?.isFavorite {
+            XCTAssertFalse(falseValue, "isFavorite should default to False")
+        } else {
+            XCTFail("isFavorite should have a value")
+        }
+        
+        let sut2 = OffersCollectionViewCellViewModel(url: "testURL",
+                                                     name: "testName",
+                                                     value: "testValue",
+                                                     isFavorite: true)
+        
+        XCTAssertNotNil(sut2.url, "URL Should not be nil")
+        XCTAssertNotNil(sut2.name, "Name Should not be nil")
+        XCTAssertNotNil(sut2.value, "Value Should not be nil")
+        if let trueValue = sut2.isFavorite {
+            XCTAssertTrue(trueValue, "isFavorite should be True")
+        } else {
+            XCTFail("isFavorite should have a value")
         }
     }
-
 }
