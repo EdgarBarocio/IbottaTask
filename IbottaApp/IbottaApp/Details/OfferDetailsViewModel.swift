@@ -7,6 +7,6 @@
 
 import Foundation
 
-class DetailsViewModel {
+class OfferDetailsViewModel {
     
 }

@@ -11,6 +11,7 @@ import UIKit
 class OfferCollectionViewCell: UICollectionViewCell {
     
     var details: OffersModel?
+    static let cellIdentifier = "OfferCell"
     
     private var offerImage: UIImageView = {
         let imageView = UIImageView()

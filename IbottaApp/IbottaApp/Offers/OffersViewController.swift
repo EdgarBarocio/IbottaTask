@@ -10,6 +10,7 @@ import UIKit
 class OffersViewController: UIViewController {
 
     var offersCollectionView: UICollectionView!
+    private var viewModel: OffersViewModel = OffersViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,20 +25,9 @@ class OffersViewController: UIViewController {
 extension OffersViewController: UICollectionViewDelegate, UICollectionViewDataSource {
    
     private func buildCollectionView() {
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
-        let width = UIScreen.main.bounds.size.width
-        //calculation of cell size
-        layout.itemSize = CGSize(width: ((width / 2) - 32), height: 200)
-        layout.minimumInteritemSpacing = 0.0
-        layout.minimumLineSpacing = 0.0
-        
-        self.offersCollectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
+        self.offersCollectionView = viewModel.buildCollectionView()
         self.offersCollectionView.dataSource = self
         self.offersCollectionView.delegate = self
-        self.offersCollectionView.register(OfferCollectionViewCell.self, forCellWithReuseIdentifier: "OfferCell")
-        self.offersCollectionView.backgroundColor = UIColor.white
-        self.offersCollectionView.collectionViewLayout = layout
         view.addSubview(self.offersCollectionView)
     }
     
