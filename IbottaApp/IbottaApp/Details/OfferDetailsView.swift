@@ -32,16 +32,18 @@ class OfferDetailsView: UIViewController {
     
     private var offerNameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "AvenirNext-Regular", size: 11)
+        label.font = UIFont(name: "AvenirNext-Regular", size: 22)
         //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
         label.text = "Offer Name"
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private var offerDetailsLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "AvenirNext-DemiBold", size: 12)
+        label.font = UIFont(name: "AvenirNext-DemiBold", size: 25)
         label.numberOfLines = 0
         //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
         label.text = "Offer Details"
@@ -51,7 +53,7 @@ class OfferDetailsView: UIViewController {
     
     private var termsLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "AvenirNext-DemiBold", size: 10)
+        label.font = UIFont(name: "AvenirNext-DemiBold", size: 12)
         label.numberOfLines = 0
         //label.textColor = UIColor(red: 74.0, green: 74.0, blue: 74.0, alpha: 1.0)
         label.text = "Offer terms"
@@ -123,5 +125,7 @@ class OfferDetailsView: UIViewController {
         self.termsLabel.text = viewModel.offerTerms
         
         self.offerImage.sd_setImage(with: URL(string:viewModel.offerURL ?? ""), placeholderImage: UIImage(named: "Empty"))
+        
+        
     }
 }
